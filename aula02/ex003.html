@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--essa daqui em baixo e a parte de estilo do body-->
+    <style>
+        body{background-color: rgb(108, 108, 219);
+        color: yellowgreen;
+        font: normal 20pt Arial;
+        }
+        h1{
+            color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h1>  Hello World! </h1> 
+    <!--o h1 é usado para definir o titulo primario enquanto o p é usado para o paragrafo-->
+    <p>Sempre comece com Hello World</p>
+
+    <!--aqui colcamos a miha primeira mensagem em js-->
+    <script>
+        //salvando uma variavel
+        var n1 = Number.parseFloat(window.prompt('numero 1:'));
+        var n2 = Number.parseFloat(window.prompt('numero 2:'));
+        
+        // o + pode ser usado para adição ou concatenação ou adição
+        //para soma tem que ser numer + number
+        //o window.prompt retorna um tipo string
+        //Number converte para numero e Sting converte para string
+        var soma = n1+n2;
+        //window.alert('soma ' + n1 + '+' + n2 + "="+ soma);
+
+        /*há a possibilidade de se concatenar usando o $ ao inves de usar o +, as lembrar de usar entre crases ``*/
+        window.alert(`soma ${n1} + ${n2} = ${soma}`);
+    </script>
+
+</body>
+</html>
