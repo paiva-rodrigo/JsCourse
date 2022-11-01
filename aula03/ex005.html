@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primerios passos com DOM</title>
+
+    <style>
+        body{
+            background: rgb(68, 68, 199);
+            color: white;
+            font: normal 20 pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Inicializando com DOM</h1>
+    <p>Aqui o resultado</p>
+    <div>Clique em mim</div>
+    <p id = 'msg'>Aprendendo a usar o <strong>DOM</strong> em Java</p>
+    <script>
+        /*usado para ver a url window.document.URL*/
+        //document.write(window.document.contentType);
+
+        //agora mostrar como se seleciona um elemento, qu sepode selecionar com 
+        //tag ou com nome
+        var p1 = window.document.getElementsByTagName('p')[0];
+        window.document.write('Esta escrito assim '+p1.innerText)//selecionando o p1
+        p1.style.color = 'blue'
+
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background  = 'green'
+        d.innerText = 'Mudando de texto'
+        */
+
+        
+
+    </script>
+</body>
+</html>
