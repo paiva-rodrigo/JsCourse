@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando numeros</title>
+
+    <style>
+        body{
+            font: normal 18pt Arial;
+        }
+        input{
+            font: normal 18pt Arial;
+            width: 100px;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Calculo do IMC</h1>
+    Peso (Kg) = <input type="number" name="txtpeso" id="txtpeso"> <br>
+    Altura (m) = <input type="number" name="txtaltura" id="txtaltura"><br>
+
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="resp"></div>
+    <script>
+       function calcular(){
+            var tn1 = window.document.getElementById('txtpeso')
+            var tn2 = window.document.getElementById('txtaltura')
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
+
+            var imc = n1/(n2**2)
+
+            var res = window.document.querySelector('div#resp')
+            res.innerHTML = `Seu imc é ${imc}`
+
+            if (imc < 18.5 || imc > 24.9){
+                res.innerHTML += "Seu peso Não está ideal"
+            }else{
+                res.innerHTML += "está ideal"
+            }
+            res.innerHTML+= " Fim "
+       }
+
+    </script>
+
+</body>
+</html>
